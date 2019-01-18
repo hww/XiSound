@@ -23,10 +23,9 @@
 // =============================================================================
 
 using System;
-using VARP.DataStructures;
-using UnityEngine.Networking;
+using Plugins.VARP.DataStructures.Unions;
 
-namespace VARP.Sounds
+namespace Plugins.VARP.Sounds
 {
     /// <summary>
     /// This is the handle of sound source 

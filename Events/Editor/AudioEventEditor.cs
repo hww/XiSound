@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-namespace VARP.Sounds.Events.Editor
+namespace Plugins.VARP.Sounds.Events.Editor
 {
 	[CustomEditor(typeof(BaseAudioEvent), true)]
 	public class AudioEventEditor : UnityEditor.Editor

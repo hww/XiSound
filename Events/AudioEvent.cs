@@ -1,11 +1,11 @@
 ﻿using System;
 using NaughtyAttributes;
+using Plugins.VARP.DataStructures;
+using Plugins.VARP.Fields;
 using UnityEngine;
 using UnityEngine.Audio;
-using VARP.DataStructures;
-using VARP.Fields;
 
-namespace VARP.Sounds.Events
+namespace Plugins.VARP.Sounds.Events
 {
     [CreateAssetMenu(menuName = "Rocket/Audio Events/SimpleAudioEvent")]
     public class AudioEvent : BaseAudioEvent

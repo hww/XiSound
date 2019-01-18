@@ -26,7 +26,7 @@ using System.Text;
 using Code.Display;
 using UnityEngine;
 
-namespace VARP.Sounds
+namespace Plugins.VARP.Sounds
 {
     public partial class SoundSystem
     {

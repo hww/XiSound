@@ -22,13 +22,11 @@
 // SOFTWARE.
 // =============================================================================
 
-using System.Collections.Generic;
-using VARP.DataStructures;
-using VARP.Sounds.Events;
-using UnityEditor;
+using Plugins.VARP.DataStructures;
+using Plugins.VARP.Sounds.Events;
 using UnityEngine;
 
-namespace VARP.Sounds
+namespace Plugins.VARP.Sounds
 {
     /// <summary>
     /// This object is connectet to 
@@ -222,7 +220,9 @@ namespace VARP.Sounds
         {
             if (DoFadeOut)
             {
-                SoundSystem.Log($"Stop (FadeOut): {EventName} {ClipName}");
+                string message = $"Stop (FadeOut): {EventName} {ClipName}";
+                if (SoundSystem.Verbose)
+                    Debug.Log("[SoundManager] " + message);
 
                 if (Source.isPlaying)
                 {
@@ -342,7 +342,9 @@ namespace VARP.Sounds
 
         void OnEnd()
         {
-            SoundSystem.Log($"OnEnd: {Name}");
+            string message = $"OnEnd: {Name}";
+            if (SoundSystem.Verbose)
+                Debug.Log("[SoundManager] " + message);
             Name = InitialName;
             // ---- first mark it as completed ----
             State = ESoundSourceState.Completed;

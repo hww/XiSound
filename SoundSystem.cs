@@ -23,11 +23,11 @@
 // =============================================================================
 
 using Code.Subsystems;
-using VARP.DataStructures;
-using VARP.Sounds.Events;
+using Plugins.VARP.DataStructures;
+using Plugins.VARP.Sounds.Events;
 using UnityEngine;
 
-namespace VARP.Sounds
+namespace Plugins.VARP.Sounds
 {
     public partial class SoundSystem : BaseSystem
     {
@@ -35,7 +35,8 @@ namespace VARP.Sounds
         // Constructor
         // =================================================================================================================
     
-        public SoundSystem(BaseSystem parent, GameData gameData)
+        /// <summary>SoundSystem constructor</summary>
+        public SoundSystem(BaseSystem parent, object gameData)
         {
             parent.AddChild(this);
         }
@@ -44,11 +45,13 @@ namespace VARP.Sounds
         // Singleton
         // =================================================================================================================
 
+        /// <summary>Initialize system</summary>
         public static void InitA()
         {
             InitPool();
         }
 
+        /// <summary>De initialize system</summary>
         public static void DeInit()
         {
             DeinitPool();
@@ -58,6 +61,7 @@ namespace VARP.Sounds
         // MonoBehaviour
         // =================================================================================================================
 
+        /// <summary>Update system</summary>
         public static void OnUpdate()
         {
             var deltaTime = Time.deltaTime;
@@ -76,13 +80,18 @@ namespace VARP.Sounds
 
         private const int LIMIT_SOURCES = 64;
         
+        /// <summary></summary>
         private static readonly DLinkedList<SoundSource> soundSourcesList = new DLinkedList<SoundSource>();
-        
+        /// <summary></summary>
         public static void Add(DLinkedListNode<SoundSource> link) { soundSourcesList.AddLast(link); }
+        /// <summary></summary>
         public static void Remove(DLinkedListNode<SoundSource> link) { soundSourcesList.Remove(link); }
+        /// <summary></summary>
         public static int SndSourcesCount => soundSourcesList.Count;
+        /// <summary></summary>
         public static bool IsReachLimit => soundSourcesList.Count >= LIMIT_SOURCES;
 
+        /// <summary></summary>
         public static SoundHandle Play(AudioEvent audioEvent, SoundSource.OnEndDelegate onChangeState = null)
         {
             var soundSource = CreateSoundObject();
@@ -94,12 +103,15 @@ namespace VARP.Sounds
             }
             else
             {
-                Log($"Can't create sound source for event {audioEvent.name}");
+                string message = $"Can't create sound source for event {audioEvent.name}";
+                if (Verbose)
+                    Debug.Log("[SoundManager] " + message);
                 PrintSoundManager();
                 return SoundHandle.NullHandle;
             }
         }
 
+        /// <summary></summary>
         public static SoundHandle Play(AudioEvent audioEvent, string clipName, Vector3 position, SoundSource.OnEndDelegate onChangeState = null)
         {
             var soundSource = CreateSoundObject();
@@ -110,12 +122,15 @@ namespace VARP.Sounds
             }
             else
             {
-                Log($"Can't create sound source for event {audioEvent.name}");
+                string message = $"Can't create sound source for event {audioEvent.name}";
+                if (Verbose)
+                    Debug.Log("[SoundManager] " + message);
                 PrintSoundManager();
                 return SoundHandle.NullHandle;
             }
         }
         
+        /// <summary></summary>
         public static void StopAllSounds()
         {
             var curent = soundSourcesList.First;
@@ -128,6 +143,7 @@ namespace VARP.Sounds
             }
         }
         
+        /// <summary></summary>
         public static void StopAllSound(string eventName)
         {
             var curent = soundSourcesList.First;
@@ -142,6 +158,7 @@ namespace VARP.Sounds
 
         }
         
+        /// <summary></summary>
         public static void FadeOutAllSounds()
         {
             var curent = soundSourcesList.First;
@@ -154,6 +171,7 @@ namespace VARP.Sounds
             }
         }
         
+        /// <summary></summary>
         public static void FadeOutAllSounds(string eventName)
         {
             var curent = soundSourcesList.First;
@@ -168,11 +186,5 @@ namespace VARP.Sounds
         }
 
         public static bool Verbose;
-        
-        public static void Log(string message)
-        {
-            if (Verbose)
-                Debug.Log("[SoundManager] " + message);
-        }
     }
 }

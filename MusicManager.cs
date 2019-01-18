@@ -23,10 +23,10 @@
 // =============================================================================
 
 using Code.Subsystems;
-using VARP.Sounds.Events;
+using Plugins.VARP.Sounds.Events;
 using UnityEngine;
 
-namespace VARP.Sounds
+namespace Plugins.VARP.Sounds
 {
 	public class MusicManager : BaseSystem
 	{
