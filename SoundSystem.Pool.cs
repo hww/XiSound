@@ -23,9 +23,9 @@
 // =============================================================================
 
 
-using Plugins.VARP.DataStructures;
+using VARP.DataStructures;
 
-namespace Plugins.VARP.Sounds
+namespace VARP.Sounds
 {
     public partial class SoundSystem
     {

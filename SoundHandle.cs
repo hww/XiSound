@@ -23,9 +23,9 @@
 // =============================================================================
 
 using System;
-using Plugins.VARP.DataStructures.Unions;
+using VARP.DataStructures.Unions;
 
-namespace Plugins.VARP.Sounds
+namespace VARP.Sounds
 {
     /// <summary>
     /// This is the handle of sound source 

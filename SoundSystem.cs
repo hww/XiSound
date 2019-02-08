@@ -22,12 +22,12 @@
 // SOFTWARE.
 // =============================================================================
 
-using Code.Subsystems;
-using Plugins.VARP.DataStructures;
-using Plugins.VARP.Sounds.Events;
+using VARP.Subsystems;
+using VARP.DataStructures;
+using VARP.Sounds.Events;
 using UnityEngine;
 
-namespace Plugins.VARP.Sounds
+namespace VARP.Sounds
 {
     public partial class SoundSystem : BaseSystem
     {

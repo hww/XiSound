@@ -1,13 +1,13 @@
 ﻿using System;
 using NaughtyAttributes;
-using Plugins.VARP.DataStructures;
-using Plugins.VARP.Fields;
+using VARP.DataStructures;
+using VARP.Fields;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Plugins.VARP.Sounds.Events
+namespace VARP.Sounds.Events
 {
-    [CreateAssetMenu(menuName = "Rocket/Audio Events/SimpleAudioEvent")]
+    [CreateAssetMenu(menuName = "Rocket/Audio Events/SimpleAudioEvent", fileName = "audio-event")]
     public class AudioEvent : BaseAudioEvent
     {
         public enum RandomMode

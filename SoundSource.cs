@@ -22,11 +22,11 @@
 // SOFTWARE.
 // =============================================================================
 
-using Plugins.VARP.DataStructures;
-using Plugins.VARP.Sounds.Events;
+using VARP.DataStructures;
+using VARP.Sounds.Events;
 using UnityEngine;
 
-namespace Plugins.VARP.Sounds
+namespace VARP.Sounds
 {
     /// <summary>
     /// This object is connectet to 

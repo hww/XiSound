@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Plugins.VARP.Sounds.Events
+namespace VARP.Sounds.Events
 {
 	/// <summary>
 	/// Single audio event. 

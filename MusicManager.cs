@@ -22,11 +22,11 @@
 // SOFTWARE.
 // =============================================================================
 
-using Code.Subsystems;
-using Plugins.VARP.Sounds.Events;
+using VARP.Subsystems;
+using VARP.Sounds.Events;
 using UnityEngine;
 
-namespace Plugins.VARP.Sounds
+namespace VARP.Sounds
 {
 	public class MusicManager : BaseSystem
 	{
