@@ -50,7 +50,7 @@ namespace VARP.Sounds
 			autoPlayNext = true;
 			musicHandle = SoundSystem.Play(MusicListAudioEvent, onChangeState: OnMusicChangeState);
 			var soundSource = SoundSystem.GetSource(musicHandle);
-			Instance.PostMessage(ESustemMessage.MusicManagerChangeMusic, soundSource.EventName, soundSource.ClipName);
+			Instance.PostMessage(Instance,ESustemMessage.MusicManagerChangeMusic, soundSource.EventName, soundSource.ClipName);
 			return musicHandle;
 		}
 
@@ -61,7 +61,7 @@ namespace VARP.Sounds
 			autoPlayNext = true;
 			musicHandle = SoundSystem.Play(MusicListAudioEvent, onChangeState: OnMusicChangeState);
 			var soundSource = SoundSystem.GetSource(musicHandle); 
-			Instance.PostMessage(ESustemMessage.MusicManagerChangeMusic, soundSource.EventName, soundSource.ClipName);
+			Instance.PostMessage(Instance,ESustemMessage.MusicManagerChangeMusic, soundSource.EventName, soundSource.ClipName);
 			return musicHandle;
 		}
 
@@ -71,7 +71,7 @@ namespace VARP.Sounds
 			var soundSource = SoundSystem.GetSource(musicHandle);
 			if (soundSource != null && soundSource.IsNotCompleted)
 			{
-				Instance.PostMessage(ESustemMessage.MusicManagerStopMusic, soundSource.EventName, soundSource.ClipName);
+				Instance.PostMessage(Instance,ESustemMessage.MusicManagerStopMusic, soundSource.EventName, soundSource.ClipName);
 				soundSource.FadeOut();
 			}
 		}
