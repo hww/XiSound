@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: audio-event-muisic
   m_EditorClassIdentifier: 
   Volume:
-    min: 1
-    max: 1
+    min: 0.3824107
+    max: 0.7043581
   Pitch:
-    min: 1
-    max: 1
+    min: 0.7200629
+    max: 1.2226145
   IsLooped: 0
   IsPausable: 0
   DelayTime:

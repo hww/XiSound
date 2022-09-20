@@ -21,6 +21,7 @@ namespace XiSound.Events
         public RandomFloat Volume = new RandomFloat(1,1);
         [Range(0,2)]
         public RandomFloat Pitch = new RandomFloat(1,1);
+        [InfoBox("Other settings")] //< Fix the overlaping with previous slider
         public bool IsLooped;
         public bool IsPausable;
         public RandomFloat DelayTime = new RandomFloat(0,0);
@@ -33,6 +34,10 @@ namespace XiSound.Events
         public RandomMode SequenceMode;
         public int CurentClip;
 
+        private void OnEnable()
+        {
+            listOfSources = new DLinkedList<SoundSource>();
+        }
         public override bool Play(AudioSource source, bool playSound = true)
         {
             if (Clips.Length == 0) return false;
@@ -92,7 +97,7 @@ namespace XiSound.Events
         public int limitSources = 0;
 
         // List of available sources
-        private DLinkedList<SoundSource> listOfSources = new DLinkedList<SoundSource>();
+        private DLinkedList<SoundSource> listOfSources;
 
         public void Add(DLinkedListNode<SoundSource> link) { listOfSources.AddLast(link); }
         public void Remove(DLinkedListNode<SoundSource> link) { listOfSources.Remove(link); }
