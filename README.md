@@ -10,7 +10,7 @@ The tiny sound library for Unity 3D designed by [hww](https://github.com/hww)
 
 ## Introduction
 
-This is an extremely minimalist version similar to FMOD but much simpler and more compact. Good for small game projects Match3, VR, AR etc.
+This is an extremely minimalist version similar to FMOD but much simpler and more compact. Good for small game projects Match3, VR, AR etc. The basic design concept is not to use Unity components, but to use only Assets and some programming. 
 
 The system was used for one commercial project which sells worldwide. 
 
