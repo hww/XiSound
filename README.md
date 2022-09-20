@@ -28,21 +28,24 @@ You can also install via git url by adding this entry in your manifest.json
 ```
 
 ## Usage
-
-Create the set of audio events in the project with RMB/Create/XiSound/SimpleAudioEvent 
+Begin with creating the set of your audio events in the project with the right mouse button /Create/XiSound/SimpleAudioEvent 
 Then rename the event and edit it with Unity inspector (see image bellow)
 
 ![Audio Event Image](https://raw.githubusercontent.com/hww/XiSound/master/Assets/XiSound/Documentation/AudioEvent.gif)
 
+
 Each event could have a collection of sounds. Those sounds could be played with valious ways.
 
-- Single _First sound only_
-- Sequence _The incremental mode_
-- Random _The random order_
+- Single _To play the first sound only_
+- Sequence _To play the next sound every time (incremental mode)_
+- Random _To play in the random order_
+
+The first two modes are the best. The Random mode produces allot of problems for QA departament. 
+
 
 ## API
 
-The first step is to create the SoundSystem and the MusicManager
+The first step of initialization is to create the SoundSystem and the MusicManager
 
 ```C#
 // Assign the AudioEvent with one or more music files
@@ -56,7 +59,7 @@ musicManager = new MusicManager(null, musicEvent);
 SoundSystem.PreInitialize();
 ```
 
-Then the sound system sould be updated every frame.
+After initialization the SoundSystem should be updated every frame.
 
 ```C#
 void Update()
@@ -65,7 +68,7 @@ void Update()
 }
 ```
 
-The various of music methods below
+There are the next methods in the music manager.
 
 ```C#
 SoundHandle MusicManager.PlayMusic();
@@ -74,7 +77,7 @@ MusicManager.StopMusic();
 MusicManager.MusicVolume = 0.5f;
 ```
 
-For FX sounds there are this methods in the SoundSystem class.
+There are the next methods in the SoundSystem class.
 
 ``` C#
 // Play the next sound once and call delegate at the end
@@ -89,7 +92,7 @@ void FadeOutAllSounds()
 void FadeOutAllSounds(string eventName)
 ```
 
-## SoundHandle
+## Sound Handle
 
 When the sound is created and the handle is stored to a variable, the various methods with this sound instance is possible. 
 
@@ -104,5 +107,5 @@ void Stop()
 void FadeOut()
 ```
 
-To move sound source with the object shoudld be used GetSource for the handle.
+To move sound source with the object should be used GetSource for the handle.
 
