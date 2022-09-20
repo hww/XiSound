@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/hww/XiSound/compare/v1.0.0...v1.0.1) (2022-09-20)
+
+
+### Bug Fixes
+
+* **main:** It is workable now ([e924cc6](https://github.com/hww/XiSound/commit/e924cc6494c186bca157708244653ac35cdfca59))
+
 # 1.0.0 (2022-09-19)
 
 
