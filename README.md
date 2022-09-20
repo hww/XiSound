@@ -42,5 +42,50 @@ Each event could have a collection of sounds. Those sounds could be played with 
 
 ## API
 
+The first step is to create the SoundSystem and the MusicManager
 
+```C#
+// Assign the AudioEvent with one or more music files
+public AudioEvent musicEvent;
+
+// Create the sound system
+soundSystem = new SoundSystem(null, null);
+// Initialize the music manager
+musicManager = new MusicManager(null, musicEvent);
+// Initialize the sound system
+SoundSystem.PreInitialize();
+```
+
+Then the sound system sould be updated every frame.
+
+```C#
+void Update()
+{
+   SoundSystem.OnUpdate(); // Update the sound system
+}
+```
+
+The various of music methods below
+
+```C#
+SoundHandle MusicManager.PlayMusic();
+SoundHandle MusicManager.PlayMusic(string clipName);
+MusicManager.StopMusic();
+MusicManager.MusicVolume = 0.5f;
+```
+
+## SoundHandle
+
+When the sound is created and the handle is stored to a variable, the various methods with this sound instance is possible. 
+
+``` C#
+// Check if the sound is still exists
+bool IsExisting
+// Get the Unity sound source
+SoundSource GetSource()
+// Stop the sound
+void Stop()
+// Fadeout the sound
+void FadeOut()
+```
 
