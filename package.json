@@ -1,7 +1,7 @@
 {
   "name": "com.hww.xisound",
   "displayName": "XiSound",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2021.1",
   "description": "XiSound is tiny sound system for Unity 3D.",
   "license": "MIT",
