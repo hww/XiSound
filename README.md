@@ -109,3 +109,6 @@ void FadeOut()
 
 To move sound source with the object should be used GetSource for the handle.
 
+## Example
+
+There is simple example in the XiSound/Example folder.
