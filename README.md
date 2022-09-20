@@ -74,6 +74,21 @@ MusicManager.StopMusic();
 MusicManager.MusicVolume = 0.5f;
 ```
 
+For FX sounds there are this methods in the SoundSystem class.
+
+``` C#
+// Play the next sound once and call delegate at the end
+SoundHandle Play(AudioEvent audioEvent, SoundSource.OnEndDelegate onChangeState = null)
+// Play the sound at the position and call delegate at the end.
+// Play the next when clipName is null 
+SoundHandle Play(AudioEvent audioEvent, string clipName, Vector3 position, SoundSource.OnEndDelegate onChangeState = null)
+// Control the sound
+void StopAllSounds()
+void StopAllSound(string eventName)
+void FadeOutAllSounds()
+void FadeOutAllSounds(string eventName)
+```
+
 ## SoundHandle
 
 When the sound is created and the handle is stored to a variable, the various methods with this sound instance is possible. 
