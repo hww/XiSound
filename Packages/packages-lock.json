@@ -12,7 +12,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2af180b09e32aa42cbac287aeca74d228c1f7154"
+      "hash": "26dae5b5a9a88a25784f2ddfab8c6c5339ba1237"
     },
     "com.hww.xidebugmenu": {
       "version": "https://github.com/hww/XiDebugMenu.git#upm",
@@ -22,14 +22,14 @@
         "com.hww.xicore": "https://github.com/hww/XiCore.git#upm",
         "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm"
       },
-      "hash": "aab3716900924e384e8e9c9f6a7abf0233d51805"
+      "hash": "b5eab54dbb63b46766078e4f3d5d10b8b4497b75"
     },
     "com.hww.xisubsystem": {
       "version": "https://github.com/hww/XiSubsystem.git#upm",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "99b01b7b2df6b7879c9a365ec0c19d9e9ce7607c"
+      "hash": "efc32cd5c9ddc51a47c16c7e302a0a4d308efdac"
     },
     "com.unity.collab-proxy": {
       "version": "1.17.2",
