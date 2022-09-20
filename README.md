@@ -27,3 +27,20 @@ You can also install via git url by adding this entry in your manifest.json
 "com.hww.xisound": "https://github.com/hww/XiSound.git#upm"
 ```
 
+## Usage
+
+Create the set of audio events in the project with RMB/Create/XiSound/SimpleAudioEvent 
+Then rename the event and edit it with Unity inspector (see image bellow)
+
+![Audio Event Image](https://raw.githubusercontent.com/hww/XiSound/master/Assets/XiSound/Documentation/AudioEvent.gif)
+
+Each event could have a collection of sounds. Those sounds could be played with valious ways.
+
+- Single _First sound only_
+- Sequence _The incremental mode_
+- Random _The random order_
+
+## API
+
+
+
