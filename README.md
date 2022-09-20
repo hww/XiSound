@@ -104,3 +104,5 @@ void Stop()
 void FadeOut()
 ```
 
+To move sound source with the object shoudld be used GetSource for the handle.
+
