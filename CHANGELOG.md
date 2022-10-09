@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/hww/XiSound/compare/v1.0.1...v1.0.2) (2022-10-09)
+
+
+### Bug Fixes
+
+* **code:** Minor changes ([d1665e1](https://github.com/hww/XiSound/commit/d1665e1bf28d17282d6bb69735df1a1249e5355c))
+
 ## [1.0.1](https://github.com/hww/XiSound/compare/v1.0.0...v1.0.1) (2022-09-20)
 
 
