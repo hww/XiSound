@@ -80,7 +80,7 @@ namespace XiSound
         public SoundSource()
         {
             var obj = new GameObject(InitialName);
-            //obj.hideFlags = HideFlags.HideAndDontSave;
+            obj.hideFlags = HideFlags.HideAndDontSave;
             Source = obj.AddComponent<AudioSource>();
             Link = new DLinkedListNode<SoundSource>(this);
             linkForEvent = new DLinkedListNode<SoundSource>(this);
